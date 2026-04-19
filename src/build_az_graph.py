@@ -46,13 +46,19 @@ warnings.filterwarnings("ignore")
 
 # ── CONFIG ─────────────────────────────────────────────────────────────────────
 
-DSS_DIR     = Path(r".\OpenDSS\Distrib\IEEETestCases\123Bus")
+from pathlib import Path
+
+BASE_DIR = Path(__file__).resolve().parent.parent  # project root
+
+DSS_DIR = BASE_DIR / "OpenDSS" / "Distrib" / "IEEETestCases" / "123Bus"
+
+
 MASTER_FILE = DSS_DIR / "IEEE123Master.dss"
 OUT_DIR     = Path(r".\data")
 
 # API keys — both optional, scripts fall back to calibrated synthetic data
 NOAA_TOKEN  = "AmaawOYAtZtlcmzfMzfOeHkwqnUlDexY"
-EIA_KEY     = ""          # get free at eia.gov/opendata
+EIA_KEY     = "ixfA1G649j8EGxBPcxiVu0svpM8REa6UzLhdPFAV"          # get free at eia.gov/opendata
 
 # Years to build — NSRDB only goes to 2023, so cap there
 SIM_YEARS   = [2019, 2020, 2021, 2022, 2023]
