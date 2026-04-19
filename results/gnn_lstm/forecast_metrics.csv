@@ -1,0 +1,10 @@
+metric,value
+test_mae,276.2928771972656
+test_rmse,323.81353759765625
+test_mape_pct,4.990363121032715
+persistence_mae,577.6654052734375
+persistence_rmse,700.954345703125
+persistence_mape_pct,9.305360794067383
+heatdome_test_mae,
+heatdome_test_rmse,
+heatdome_test_mape_pct,
